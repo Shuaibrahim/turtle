@@ -1,0 +1,147 @@
+  /* Banner */
+
+  .banner{
+    background-image:linear-gradient(rgba(132, 255, 104, 0.25),rgba(0,0,0,0.75)),url('Pictures/Kosgodabanner.jpg');
+  }
+
+  .small-desc{
+    text-align: center;
+    background-image:url('Pictures/HikkaduwaSections.jpg');
+    align-items: center;
+    padding: 3rem;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 15px solid #091b32;
+  }
+
+  .small-desc p {
+    max-width: 300px;
+    margin: auto;
+    color: black;
+    background: #b0b3b286;
+
+  }
+
+  .small-desc img {
+    width: 300px;
+    text-align: center;
+    height: 200px;
+    margin: 2rem;
+}
+
+.visiting-hours {
+  background-image:url('Pictures/HikkaduwaSections.jpg');
+  color: #19D6D2;
+  padding: 2rem;
+  margin: 0 auto;
+  border-bottom: 15px solid #091b32;
+  background-size: cover;
+}
+
+.visit-container{
+  background-color: #135266;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.visiting-hours h2 {
+  text-align: center;
+  color: #A99C69;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.visiting-hours ul {
+  list-style-type: circle;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.visiting-hours ul li {
+  margin-bottom: 10px;
+}
+
+.gallery {
+  padding: 2rem;
+  background: #135266;
+  color: #19D6D2;
+  border-bottom: 15px solid #091b32;
+
+}
+
+.gallery h2 {
+  text-align: center;
+  color: #A99C69;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.gal-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gal-item {
+  flex-basis: 200px; /* Adjust to control the width of your gallery items */
+}
+
+.gal-item img {
+  width: 350px;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Added zoom and rotate animation on hover */
+.gal-item:hover img {
+  transform: scale(1.1) rotate(15deg);
+}
+
+ /*Map Section*/
+
+ .map-section {
+  display: flex;
+  justify-content: center; /* Added to center the map horizontally */
+  align-items: center; /* Added to center the map vertically */
+  padding: 2rem;
+  background: #135266;
+  color: #19D6D2;
+}
+
+.map-section h2 {
+  text-align: center;
+  color: #A99C69;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .map-container {
+    width: 100%;
+    height: auto;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .map-container {
+    width: 80%;
+    height: auto;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}

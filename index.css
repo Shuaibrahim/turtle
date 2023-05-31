@@ -1,0 +1,542 @@
+    /*Start of Main*/
+
+    .bannerhp {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 15px solid #091b32;
+    }
+    
+    .banner-video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      object-fit: cover;
+    }
+    
+    .bannerhp-title {
+      font-size: 4rem;
+      color: #ffffff;
+      text-align: center;
+      max-width: 70%;
+      background-color: rgba(9, 27, 50, 0.7);
+      padding: 1rem;
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .bannerhp {
+        height: 75vh;
+      }
+    
+      .bannerhp-title {
+        font-size: 3rem;
+      }
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .bannerhp {
+        height: 50vh;
+      }
+    
+      .bannerhp-title {
+        font-size: 2rem;
+      }
+    }
+
+    /*Population Section*/
+
+    .Population-section {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        padding: 1rems;
+        background-image: url('Pictures/Section 1.png');
+        background-size: cover;
+        background-position: center;
+        border-bottom: 15px solid #091b32;
+    }
+
+    .Population-container { 
+        display: flex;
+        align-items: center;
+        max-width: 1200px; 
+        width: 100%;
+    }
+
+    .Population-image img {
+        flex-shrink: 0;
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .Population-content {
+        text-align: justify;
+        padding-left: 1rem;
+        margin-left: 0;
+        flex-grow: 1;
+    }
+
+    .Population-content h2 {
+        color: #A99C69;
+        margin-bottom: 1rem;
+    }
+
+    .Population-content p {
+        color: #ffffff;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .Population-container { 
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .Population-image img {
+        padding-right: 0;
+        margin-right: 0;
+        width: 80%;
+      }
+    
+      .Population-content {
+        padding-left: 0;
+        margin-left: 0;
+        padding: 1rem; /* new padding here */
+        margin-top: 2rem;
+      }
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .Population-container { 
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .Population-image img {
+        padding-right: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    
+      .Population-content {
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+    
+      .Population-content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    
+      .Population-content p {
+        font-size: 1rem;
+        padding: 1rem; 
+      }
+    }    
+    
+    /*Facts Section*/
+
+    .section-title {
+      font-size: 2rem;
+      color: #A99C69;
+      display: flex;
+      justify-content: center; /* Corrected this */
+  }
+  
+  .fact-title {
+      text-align: center;
+  }
+  
+  .facts-section {
+      background-color: #135266;
+      padding: 2rem 0;
+      background-image: url('Pictures/Section 2.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 15px solid #091b32;
+  }
+  
+  .facts-container ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap; /* Added this to ensure content wraps if it exceeds the container's width */
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+  }
+  
+  .facts-container ul li {
+      padding-left: 0rem;
+      text-align: left;
+  }
+  
+  .facts-container ul li::marker {
+      font-size: 1rem;
+      color: #19D6D2; 
+  }
+  
+  .fact {
+      width: 300px;
+      text-align: center;
+  }
+  
+  .fact-image{
+      width: 300px; /* Changed this */
+      height: 200px; 
+  }
+  
+  h3{
+      text-align: center;
+  }
+  
+  .fact h3 {
+      color: #90C9AB;
+      margin-bottom: 1rem;
+      position: relative; /* Added this */
+  }
+  
+  .fact h3::before {
+      content: '•'; /* Added a bullet point */
+      position: absolute;
+      left: -20px; /* Adjust as needed */
+      color: #90C9AB; /* Same color as the heading text */
+  }
+  
+  .fact p {
+      color: #A99C69;
+      text-align: justify;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .facts-container ul {
+      flex-direction: column;
+    }
+  
+    .fact {
+      width: 80%;
+      margin: 1rem auto;
+    }
+  
+    .fact-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .facts-container ul {
+      flex-direction: column;
+    }
+  
+    .fact {
+      width: 90%;
+      margin: 1rem auto;
+    }
+  
+    .fact-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .fact h3 {
+      font-size: 1.5rem;
+    }
+  
+    .fact p {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    .section-title {
+      text-align: center;
+  }
+
+  }
+  
+    /*Life stages section*/
+
+    .life-stages-section {
+      background-color: rgba(9, 27, 50, 0.7);
+      background-image: url('Pictures/Section 3.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 15px solid #091b32;
+      display: flex;        
+      flex-direction: column; 
+      align-items: center;  
+      }
+  
+      
+      .lifestage{
+        color: #a99c69;
+        display: inline-flex;
+        align-items: center;
+        text-shadow: -1px -1px 0 #2a3d30, 1px -1px 0 #191e1a, -1px 1px 0 #2a352d, 1px 1px 0 #05240f;
+      }
+        
+      .lifestage::before {
+        content: counter(sub-section-counter) ". ";
+        margin-right: 0.5rem;
+      }
+
+      .section-title-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .sub-sections-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        align-content: center;
+        align-items: center;
+        counter-reset: sub-section-counter;
+        padding: 5rem;
+      }
+      
+      .sub-section {
+        background-color: rgba(9, 27, 50, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 2rem;
+        counter-increment: sub-section-counter;
+        border: 2px solid #fff;
+    }
+
+      .sub-section img {
+        width: 250px;
+        height: auto;
+        margin-right: 2rem;
+      }
+      
+      .sub-section-text {
+        width: 50%;
+        color: #19d6d2;
+        text-align: justify;
+        position: relative;
+        text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .sub-sections-container {
+          padding: 3rem;
+        }
+      
+        .sub-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 1rem;
+        }
+      
+        .sub-section img {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      
+        .sub-section-text {
+          width: 80%;
+        }
+      }
+      
+      @media only screen and (max-width: 768px) {
+        .sub-sections-container {
+          padding: 2rem;
+        }
+      
+        .sub-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 1rem;
+        }
+      
+        .sub-section img {
+          width: 200px;
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      
+        .sub-section-text {
+          width: 90%;
+        }
+      
+        .lifestage {
+          font-size: 1.2rem;
+        }
+      }      
+
+    /*Image gallery Section*/
+    
+    .gallery-section {
+        padding: 2rem;
+        background-color: #03da84;
+        background-image: url('Pictures/Section 5.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto;
+        text-align: center;
+      }
+
+    .gallery-heading{
+      color: #a99c69;
+      text-shadow: -1px -1px 0 #948344, 1px -1px 0 #948344, -1px 1px 0 #948344, 1px 1px 0 #948344;
+
+    }
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    
+    .gallery-image {
+      width: 200px;
+      height: 150px;
+      cursor: pointer;
+    }
+    
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000cc;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .lightbox:target {
+      display: flex;
+    }
+    
+    .lightbox img {
+      max-width: 600px;
+      max-height: 500px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .gallery {
+        justify-content: space-around;
+      }
+      
+      .gallery-image {
+        width: 150px;
+        height: 120px;
+      }
+      
+      .lightbox img {
+        max-width: 500px;
+        max-height: 400px;
+      }
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .gallery-section {
+        padding: 1rem;
+      }
+      
+      .gallery-image {
+        width: 120px;
+        height: 100px;
+      }
+      
+      .lightbox img {
+        max-width: 400px;
+        max-height: 300px;
+      }
+    }
+    
+
+    /* Responsive CSS */
+
+    /* CSS for screens with a max width of 768px (Mobile devices) */
+@media only screen and (max-width: 768px) {
+
+  .bannerhp-title {
+    font-size: 2rem;
+  }
+
+  .Population-section {
+    flex-direction: column;
+  }
+
+  .Population-content, .Population-image img {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .fact {
+    width: 100%;
+  }
+
+  .fact-image{
+    width: 100%;
+    height: auto;
+  }
+
+  .sub-section {
+    flex-direction: column;
+  }
+
+  .sub-section img, .sub-section-text {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* CSS for screens with a min-width of 769px and max-width of 1024px (Tablets) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .bannerhp-title {
+    font-size: 3rem;
+  }
+
+  .Population-content, .Population-image img {
+    width: 50%;
+  }
+
+  .fact {
+    width: 45%;
+  }
+
+  .fact-image{
+    width: 100%;
+    height: auto;
+  }
+
+  .sub-section {
+    flex-direction: row;
+  }
+
+  .sub-section img, .sub-section-text {
+    margin: 1rem;
+    width: 50%;
+  }
+
+  .gallery-image {
+    width: 45%;
+    height: auto;
+  }
+}

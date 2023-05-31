@@ -1,0 +1,305 @@
+  /* Banner */
+
+    .banner{
+      background-image:linear-gradient(rgba(132, 255, 104, 0.25),rgba(0,0,0,0.75)),url('Pictures/Bannerimg.jpg');
+    }
+
+    /*Facts Section*/
+
+    .facts{
+        background-color: #135266;
+        padding: 2rem 0;
+        background-image: url('Pictures/Section 2.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .facts-container ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .facts-container ul li {
+        padding-left: 0rem;
+        text-align: left;
+    }
+
+    .facts-container ul li::marker {
+        font-size: 1rem;
+        color: #19D6D2; 
+    }
+    .fact {
+        width: 300px;
+        text-align: center;
+    }
+
+    .fact-image{
+        width: 250px !important; 
+        height: auto !important; 
+    }
+
+
+    h3{
+        text-align: center;
+    }
+
+    .fact h3 {
+        color: #90C9AB;
+        margin-bottom: 1rem;
+    }
+
+    .fact p {
+        color: #A99C69;
+        text-align: justify;
+    }
+
+    .sub{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*Footer Section*/
+
+    .container{
+        max-width: 1170px;
+        background-color: #091B32;
+        margin: auto;
+      }
+    
+      ul{
+        list-style: none;
+      }
+    
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+    .footer{
+        background-color: #091B32;
+        padding: 20px 0;
+      }
+    
+      .footer-col{
+        width: 20%;
+        padding: 0 15px;
+      }
+    
+      .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    
+      }
+    
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #698b56;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+      }
+    
+      .footer-col ul li a:hover{
+        color: #146c7c;
+        padding-left: 8px;
+      }
+    
+      .footer-h{
+        font-size: 18px;
+        color: #948344;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        font-weight: 500;
+        position: relative;
+      }
+      
+      .footer-h::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color: #004d40;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+    
+      .pfooter{
+        text-align: center;
+        color: #146c7c;
+      }
+
+      /*RESPONSIVE MEDIA QUERIES*/
+
+  @media (max-width: 768px) {
+
+    /* Responsive styles for the header*/
+    
+      header {
+        flex-direction: column;
+      }
+    
+      .menu {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    
+      .search {
+        display: none;
+      }
+    
+      nav ul li {
+        margin: 0 10px;
+      }
+    
+      nav a {
+        font-size: 14px;
+      }
+    
+      button {
+        width: 100px;
+        font-size: 14px;
+      }
+
+       .submenu-label {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          cursor: pointer;
+       }
+    
+      .submenu-checkbox:checked ~ .sub-menu {
+        display: block;
+      }
+    
+      .menu ul li:hover .sub-menu {
+        display: none;
+      }
+      
+      .sub-menu {
+          display: none;
+      }
+
+       /* Responsive styles for the banner section */
+
+    .banner {
+        height: 200px;
+      }
+    
+      .banner-title {
+        font-size: 2.5rem;
+      }
+
+       /* Responsive styles for the Facts sections */
+
+       .facts-container ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .facts-container ul li {
+        margin-bottom: 2rem;
+      }
+    
+      .fact {
+        width: 100%;
+        max-width: 300px;
+      }
+    
+      .fact-image {
+        width: 100% !important;
+        max-width: 250px !important;
+      }
+
+     /* Responsive styles for the Footer section */
+
+    .row {
+        flex-direction: column;
+      }
+    
+      .footer-col {
+        width: 100%;
+        padding: 15px 0;
+      }
+    
+    }
+
+    @media (max-width: 576px) {
+    
+        /* Responsive styles for the header*/
+        
+          header {
+            flex-direction: column;
+          }
+        
+          .menu {
+            text-align: center;
+            padding: 0.5rem 0;
+          }
+        
+          .search {
+            display: none;
+          }
+        
+          nav ul li {
+            margin: 0 5px;
+          }
+        
+          nav a {
+            font-size: 12px;
+          }
+        
+          button {
+            width: 80px;
+            font-size: 12px;
+          }
+        
+        /* Responsive styles for the banner section */
+        
+          .banner {
+            height: 150px;
+          }
+        
+          .banner-title {
+            font-size: 1.5rem;
+          }
+        
+        /* Responsive styles for the Population section */
+        
+        .Population-content h2 {
+              font-size: 1.5rem; /* Reduce the font size of the title on mobile screens */
+          }
+        
+          .Population-section {
+              padding: 1rem;
+          }
+          /* Responsive styles for the Footer section */
+          .summary-table-title {
+            font-size: 20px;
+        }
+    
+        .summary-table {
+            font-size: 12px;
+            display: block;
+            overflow-x: auto;
+        }
+    
+        .summary-table th,
+        .summary-table td {
+            padding: 6px;
+        }
+    
+        .tblimg {
+            width: 75px;
+            height: 50px;
+        }
+        }

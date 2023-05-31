@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!--to ensure that the browser can correctly interpret and display the text on the web page.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the web pages responsive and adaptable to various screen sizes-->
+        <meta name="keywords" content="Sea Turtles, Nature, Sea, Animals"> <!--Keywords for search engines-->
+        <meta name="author" content="Shuaib Rahim"> <!--Author of the webpage-->
+        <title>PurchasenDonate</title>
+        <link rel="icon" type="image/x-icon" href="Pictures/Logo1.png"> <!--Favicon img next to the title-->
+        <link rel="stylesheet" href="Common.css"> <!--to link the common css-->
+        <link rel="stylesheet" href="Purchasendonate.css"> <!--to link the css-->
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="Index.html">
+                    <img src="Pictures/Logo1.png" alt="Logo" class="logo img">
+                </a>
+            </div>
+    
+            <nav class="menu">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Types.html">Types of Turtles</a></li>
+                    <li><a href="Hikkaduwa.html">Hikkaduwa</a></li>
+                    <li><a href="Threats.html">Threats to the Turtles</a></li>
+                    <li class="desktop-only">
+                        <a href="#">Hatcheries</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="Kosgoda.html">Kosgoda</a></li>
+                                <li><a href="Bentota.html">Bentota</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile-only"><a href="Kosgoda.html">Kosgoda</a></li>
+                    <li class="mobile-only"><a href="Bentota.html">Bentota</a></li>
+                    <li><a href="PurchasenDonate.html">Purchase and Donate</a></li>
+                </ul>
+            </nav>
+            
+    
+            <div class="search-input">
+                <input type="search" placeholder="Search">
+                <div class="search-icon">&#128269;</div>
+            </div>
+        </header>
+    
+        
+        <section class="banner"> 
+            <div class="banner-title">Purchase & Donate</div> 
+        </section>
+
+        <div class="container">
+            <div class="purchase-section">
+                <h1>Purchase</h1>
+                <p>
+                    Discover the joy of turtle conservation at our Hatchery. Purchase locally sourced turtle-themed merchandise to support 
+                    our mission and bring home a piece of your experience. Each purchase directly benefits these fascinating creatures. Shop now for a cause!
+                </p>
+                <div class="products">
+                    <!-- Product sections updated to include title inside the div -->
+                    <div class="product" style="background-image: url('Pictures/Shirtturtle.jpg')">
+                        <h3>Clothings</h3>
+                        <button class="visit">VISIT</button>
+                    </div>
+                    <div class="product" style="background-image: url('Pictures/turtornaments.jpg')">
+                        <h3>Ornaments</h3>
+                        <button class="visit">Visit</button>
+                    </div>
+                    <div class="product" style="background-image: url('Pictures/turttoys.jpg')">
+                        <h3>Toys</h3>
+                        <button class="visit">Visit</button>
+                    </div>
+                    <div class="product" style="background-image: url('Pictures/Turtaccessories.webp')">
+                        <h3>Accessories</h3>
+                        <button class="visit">Visit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="donate-section">
+                <h1>Donate for a cause</h1>
+                <p>Join our mission to safeguard the future of sea turtles! Your donation directly supports our hatcheries, helping baby turtles reach the sea. 
+                    Each contribution matters, bringing us closer to a world where these magnificent creatures thrive, not just survive. Let's turn the tide together!</p>
+                <form action="" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <label for="donation">Donation Amount</label>
+                    <input type="number" id="donation" name="donation">
+                    <label for="reference">Reference</label>
+                    <input type="text" id="reference" name="reference">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--Footer Section-->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4 class="footer-h">Home</h4>
+                        <ul>
+                            <li><a href="#Population">Turtle Population</a></li>
+                            <li><a href="#Facts">Sea Turtle Facts</a></li>
+                            <li><a href="#Lifestage">Life Stages of a Turtle</a></li>
+                            <li><a href="#Gallery">Images</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-h">Types of Turtles</h4>
+                        <ul>
+                            <li><a href="Types.html#greenturtle">The Green Sea Turtle</a></li>
+                            <li><a href="Types.html#hawksbillturtle">The Hawksbill Sea Turtle</a></li>
+                            <li><a href="Types.html#loggerheadturle">The Loggerhead Sea turtle</a></li>
+                            <li><a href="Types.html#Oliveturtle">The Olive Ridley turtle</a></li>
+                            <li><a href="Types.html#leatherbackturtle">The Leatherback Sea turtle</a></li>
+                            <li><a href="Types.html#summarytable">The Summary Table</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-h">Threats to the Turtles</h4>
+                        <ul>
+                            <li><a href="Threats.html#Naturalthreats">Natural Threats</a></li>
+                            <li><a href="Threats.html#Coastaldevelopment">Coastal Development</a></li>
+                            <li><a href="Threats.html#Poaching">Poaching</a></li>
+                            <li><a href="Threats.html#Accidentalcaptures">Accidental Captures</a></li>
+                            <li><a href="Threats.html#Marinepollution">Marine pollution</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-h">Hatcheries</h4>
+                        <ul>
+                            <li><a href="Kosgoda.html">Kosgoda</a></li>
+                            <li><a href="Bentota.html">Bentota</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-h">Purchase and Donate</h4>
+                        <ul>
+                            <li><a href="#">Purchase & Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="pfooter">&copy; 2023 Turtle Hatchery. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

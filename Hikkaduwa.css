@@ -1,0 +1,166 @@
+      /* Banner */
+
+      .banner{
+        background-image:linear-gradient(rgba(132, 255, 104, 0.25),rgba(0,0,0,0.75)),url('Pictures/Hikkaduwabanner.jpg');
+      }
+      
+    /*Other Sections*/
+
+    .info-section, .efforts-section, .rehabilitation-section {
+        text-align: justify;
+        background-image:url('Pictures/HikkaduwaSections.jpg');
+        align-items: center;
+        padding: 2rem;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 15px solid #091b32;
+    }
+
+    .info-text{
+        color: #ceffe8;
+        background-color: rgba(75, 97, 60, 0.75);
+        text-align: justify;
+        padding: 20px;
+        margin: 40px;
+        border: 5px solid #004d40;
+
+    }
+
+     .effortp, .rehabilitationp{
+        color: #ceffe8;
+        background-color: rgba(75, 97, 60, 0.75);
+        text-align: justify;
+        padding: 20px;
+        margin: 40px;
+        border: 5px solid #004d40;
+    }
+
+    .info-image{
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .info-image img {
+        max-width: 250px;
+        text-align: center;
+        height: 300px;
+    }
+
+    .info-image img:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 10px #004d40, /* outer glow */
+                    0 0 15px #19D6D2, /* inner glow */
+                    0 0 20px #004d40;
+    }
+
+    .efforts-section h2, .rehabilitation-section h2 {
+        text-align: center;
+        color: #A99C69;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    .visiting-hours {
+        background-image:url('Pictures/HikkaduwaSections.jpg');
+        color: #19D6D2;
+        padding: 2rem;
+        margin: 0 auto;
+        border-bottom: 15px solid #091b32;
+        background-size: cover;
+    }
+
+    .visit-container{
+        background-color: #135266;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .visiting-hours h2 {
+        text-align: center;
+        color: #A99C69;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    
+    .visiting-hours ul {
+        list-style-type: circle;
+        margin-left: 20px;
+        font-size: 1.2rem;
+    }
+    
+    .visiting-hours ul li {
+        margin-bottom: 10px;
+    }
+    
+    /*Image Gallery*/
+
+    .gallery {
+        padding: 2rem;
+        background: #135266;
+        color: #19D6D2;
+        border-bottom: 15px solid #091b32;
+
+    }
+    
+    .gallery h2 {
+        text-align: center;
+        color: #A99C69;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 2rem;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .grid-item {
+        perspective: 1000px;
+    }
+    
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
+    .grid-item:hover img {
+        transform: rotateY(180deg);
+    }
+
+    /*Map Section*/
+
+    .map-section {
+        align-content: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        background: #135266;
+        color: #19D6D2;
+    }
+    
+
+    
+
+   @media only screen and (max-width:600px){
+    .banner-title {
+        font-size: 2rem;
+        padding: 0.25rem;
+      }
+      .banner{
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+   }

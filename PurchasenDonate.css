@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner */
+
+.banner {
+    background-image: url("Pictures/babyturtle3.jpg");
+}
+
+.purchase-section,
+.donate-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    position: relative;
+    width: 60%;
+    height: 300px; /* you can adjust this as per your requirement */
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product h3 {
+    margin: 0;
+    background: rgba(255,255,255,0.7); /* Adding a slight white background to make the text stand out against the images */
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.visit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+    background-color: rgb(0, 255, 183);
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.product:hover .visit {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    width: 80%;
+    padding: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
