@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+          <img src="Pictures/Logo1.png" alt="Logo" class="logo img">
+        </a>
+        <h1 class="headerh1">Buy Tickets</h1>
+      </header>
+
+  <div x-data="checkout" class="det-container">
+    
+    <div class="left-section">
+      <form x-on:submit.prevent="gotoPayment">
+        <table class="details-table">
+          <tr>
+              <td class="d"><label for="fullName">Full Name</label></td>
+              <td class="d"><input type="text" name="fullName" id="fullName" x-model="guest.fullName" required></td>
+          </tr>
+          <tr>
+            <td class="d"><label for="mobile">Mobile</label></td>
+            <td class="d"><input type="tel" name="mobile" id="mobile" x-model="guest.mobile" required></td>
+          </tr>
+          <tr>
+              <td class="d"><label for="email">Email</label></td>
+              <td  class="d"><input type="email" name="email" id="email" x-model="guest.email" required></td>
+          </tr>
+          <tr>
+            <td  class="d"><label for="gender">Gender</label></td>
+            <td  class="d"><select type="gender" name="gender" id="gender" x-model="guest.gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+              </select></td>
+            </tr>
+          </table>
+          <div>
+              <button type="submit" x-on:click="gotoPayment">Continue with Purchase</button>
+          </div>
+      </form>
+      <span x-text="JSON.stringify(guest)"></span>
+    </div>
+      
+    <!-- Summary Table -->
+    <div class="right-section">
+      <table class="summary-table">
+        <tr> <td>Date</td> <td x-text="savedDate"></td> </tr>
+        <tr> <td>Time</td>
+          <td>
+            <template x-for="timeIndex in selectedTimeSlots">
+              <div x-text="openTimes[timeIndex].title"></div>
+            </template> 
+          </td>
+        </tr>
+        <tr> <td>Duration</td><td x-text="selectedTimeSlots.length +' Hrs'"></td>
+        <tr class="highlight-row"> <th>Tickets</th> <th>Charges</th> </tr>
+        <template x-for="guestIndex in ticketTypes">
+          <tr x-show="guestIndex.count > 0">
+            <td x-text="guestIndex.count + ' ' + guestIndex.name"></td>
+            <td x-text="guestIndex.total"></td>
+          </tr>
+      </template>
+        <tr class="highlight-row"> <th>Total Payable</th> <td x-text="'$' +savedGrandTotal "></td> </tr>
+      </table>
+    </div>
+  </div>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('checkout', () => ({
+          savedDate: null,
+          ticketTypes:[],
+          openTimes:[],
+          selectedTimeSlots:[],
+          savedGrandTotal:'',
+          guest: {
+                fullName: '',
+                mobile: '',
+                email: '',
+                gender: ''
+            },
+            init() {
+                this.savedDate = JSON.parse(localStorage.getItem('savedDate'));
+                this.ticketTypes = JSON.parse(localStorage.getItem('ticketTypes'));
+                this.openTimes = JSON.parse(localStorage.getItem('openTimes'));
+                this.selectedTimeSlots = JSON.parse(localStorage.getItem('selectedTimeSlots'));
+                this.savedGrandTotal = JSON.parse(localStorage.getItem('savedGrandTotal'));
+
+                const input = document.querySelector("#mobile");
+                window.intlTelInput(input, {
+                    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+                });
+            },
+            gotoPayment() {
+                // set the guest data to local storage
+                localStorage.setItem('guest', JSON.stringify(this.guest))
+
+                // redirect to payment page
+                window.location.href = 'payment.html'
+            }
+        }))
+    })
+</script>
+  
+</body>
+</html>
