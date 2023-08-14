@@ -5,23 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confirmation</title>
   <script src="//unpkg.com/alpinejs" defer></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header>
-        <a href="index.html">
-          <img src="Pictures/Logo1.png" alt="Logo" class="logo img">
-        </a>
-        <h1 class="headerh1">Buy Tickets</h1>
-      </header>
-
+  <div class="heading">
+    Buy Tickets
+  </div>
   <div class="confirm">
     <i>Thank you for your order. Your order has been confirmed with us.<br>
       You can show this confirmation at the entrance.<br>
       Following is the summary of your order.</i>
-
     <!-- Summary Table -->
     <div x-data="confirm">
       <table class="summary-table">
@@ -45,11 +38,7 @@
             <td x-text="guestIndex.total"></td>
           </tr>
         </template>
-
-        <tr> 
-            <th>Total Payable</th> 
-            <th x-text="'$' +savedGrandTotal "></th> 
-        </tr>
+        <tr class="highlight-row"> <th>Total Payable</th> <td x-text="'$' +savedGrandTotal "></td> </tr>
       </table>
     </div>
   </div>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tickets</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <script src="//unpkg.com/alpinejs" defer></script> 
 </head>
 <body>
@@ -82,32 +82,32 @@
           <h1>Price Table</h1>
           <table class="price-table" >
             <tr>
-              <th>Category</th>
-              <th>Charge per 1 normal hour</th>
-              <th>Charge per 1 peak hour</th>
+              <th class="pt">Category</th>
+              <th class="pt">Charge per 1 normal hour</th>
+              <th class="pt">Charge per 1 peak hour</th>
             </tr>
             <tr>
-              <td>Foreigner Adult</td> 
-              <td>10 USD</td> 
-              <td>13 USD</td>
+              <td class="pt">Foreigner Adult</td> 
+              <td class="pt">10 USD</td> 
+              <td class="pt">13 USD</td>
             </tr>
             <tr>
-              <td>Foreigner Child</td> 
-              <td>5 USD</td> 
-              <td>8 USD</td>
+              <td class="pt">Foreigner Child</td> 
+              <td class="pt">5 USD</td> 
+              <td class="pt">8 USD</td>
             </tr>
             <tr> 
-              <td>SL Adult</td> 
-              <td>4 USD</td> 
-              <td>6 USD</td>
+              <td class="pt">SL Adult</td> 
+              <td class="pt">4 USD</td> 
+              <td class="pt">6 USD</td>
             </tr>
             <tr>
-              <td>SL Child</td> 
-              <td>2 USD</td> 
-              <td>3 USD</td>           
+              <td class="pt">SL Child</td> 
+              <td class="pt">2 USD</td> 
+              <td class="pt">3 USD</td>           
             </tr>
             <tr>
-              <td colspan="3">Infants (SL or Foreigner) (under 4 years) entrance is completely free</td>
+              <td colspan="3" class="pt">Infants (SL or Foreigner) (under 4 years) entrance is completely free</td>
             </tr>
           </table>
         </section>
@@ -121,7 +121,7 @@
     <div class="sum-section">
       <table class="summary-table">
         <tr> 
-          <td>Date</td> 
+          <td>Date</td>
           <td x-text="date"></td> 
         </tr>
         <tr> 

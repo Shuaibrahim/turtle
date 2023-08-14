@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Details</title>
   <script src="//unpkg.com/alpinejs" defer></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 </head>
@@ -36,10 +36,12 @@
           </tr>
           <tr>
             <td  class="d"><label for="gender">Gender</label></td>
-            <td  class="d"><select type="gender" name="gender" id="gender" x-model="guest.gender">
+            <td  class="d">
+              <select type="gender" name="gender" id="gender" x-model="guest.gender">
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-              </select></td>
+              </select>
+            </td>
             </tr>
           </table>
           <div>
