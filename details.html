@@ -51,25 +51,37 @@
     </div>
       
     <!-- Summary Table -->
-    <div class="right-section">
+    <div class="sum-section">
       <table class="summary-table">
-        <tr> <td>Date</td> <td x-text="savedDate"></td> </tr>
-        <tr> <td>Time</td>
+        <tr> 
+          <td>Date</td> 
+          <td x-text="savedDate"></td> 
+        </tr>
+        <tr> 
+          <td>Time</td>
           <td>
             <template x-for="timeIndex in selectedTimeSlots">
               <div x-text="openTimes[timeIndex].title"></div>
             </template> 
           </td>
         </tr>
-        <tr> <td>Duration</td><td x-text="selectedTimeSlots.length +' Hrs'"></td>
-        <tr class="highlight-row"> <th>Tickets</th> <th>Charges</th> </tr>
+        <tr> 
+          <td>Duration</td>
+          <td x-text="selectedTimeSlots.length +' Hrs'"></td>
+        <tr class="highlight-row"> 
+          <th>Tickets</th> 
+          <th>Charges</th> 
+        </tr>
         <template x-for="guestIndex in ticketTypes">
           <tr x-show="guestIndex.count > 0">
             <td x-text="guestIndex.count + ' ' + guestIndex.name"></td>
             <td x-text="guestIndex.total"></td>
           </tr>
       </template>
-        <tr class="highlight-row"> <th>Total Payable</th> <td x-text="'$' +savedGrandTotal "></td> </tr>
+        <tr class="highlight-row"> 
+          <th>Total Payable</th> 
+          <th x-text="'$' +savedGrandTotal "></th> 
+        </tr>
       </table>
     </div>
   </div>

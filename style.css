@@ -146,6 +146,44 @@ th,td {
   border: #000000;
 }
 
+/* Style for the form fields */
+.details-table input[type="text"],
+.details-table input[type="tel"],
+.details-table input[type="email"],
+.details-table select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #135266;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.details-table select {
+  background-color: #fff;
+  color: #000000;
+}
+
+/* Style for the "Continue with Purchase" button */
+.det-container button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background-color: #146c7c;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.det-container button[type="submit"]:hover {
+  background-color: #135266;
+}
+
 /*Payment*/
 .pay-container{
   padding: 2rem;
@@ -161,6 +199,53 @@ th,td {
   border: #000000;
 }
 
+/* Style for the form fields */
+.payment-table input[type="text"],
+.payment-table input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #135266;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.payment-table input[type="text"]::placeholder,
+.payment-table input[type="tel"]::placeholder {
+  color: #9c9c9c;
+}
+
+.payment-table select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #135266;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: #000000;
+}
+
+/* Style for the "Pay" button */
+.pay-container button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background-color: #146c7c;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pay-container button[type="submit"]:hover {
+  background-color: #135266;
+}
+
 /*Confirm*/
 
 .confirm{
@@ -169,4 +254,28 @@ th,td {
   background-color: #ffffff;
   margin: 20px 0;
   text-align: center;
+}
+
+/* Style for the summary table */
+.summary-table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 10px;
+  border: 2px solid #146c7c;
+  text-align: center;
+}
+
+.summary-table th {
+  background-color: #091b32;
+  color: white;
+}
+
+.summary-table td {
+  background-color: #ffffff;
+  color: #000000;
 }

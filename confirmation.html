@@ -8,37 +8,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="heading">
-    Buy Tickets
-  </div>
+
+  <header>
+    <a href="index.html">
+      <img src="Pictures/Logo1.png" alt="Logo" class="logo img">
+    </a>
+    <h1 class="headerh1">Buy Tickets</h1>
+  </header>
+  
   <div class="confirm">
     <i>Thank you for your order. Your order has been confirmed with us.<br>
       You can show this confirmation at the entrance.<br>
       Following is the summary of your order.</i>
+
     <!-- Summary Table -->
     <div x-data="confirm">
       <table class="summary-table">
-        <tr> <td>Name</td> <td x-text="guest.fullName"></td></tr>
-        <tr> <td>Date</td> <td x-text="savedDate"></td> </tr>
-        <tr> <td>Time</td>
+        <tr> 
+          <td>Name</td> 
+          <td x-text="guest.fullName"></td>
+        </tr>
+        <tr> 
+          <td>Date</td> 
+          <td x-text="savedDate"></td> 
+        </tr>
+        <tr>
+           <td>Time</td>
           <td>
             <template x-for="timeIndex in selectedTimeSlots">
               <div x-text="openTimes[timeIndex].title"></div>
             </template> 
           </td>
         </tr>
-        <tr> <td>Duration</td><td x-text="selectedTimeSlots.length +' Hrs'"></td>
-        <tr> <td>Mobile</td> <td x-text="guest.mobile"></td> </tr>
-        <tr> <td>email</td> <td x-text="guest.email"></td> </tr>
-        <tr> <td>Gender</td> <td x-text="guest.gender"></td> </tr>
-        <tr class="highlight-row"> <th>Tickets</th> <th>Charges</th> </tr>
+        <tr> 
+          <td>Duration</td>
+          <td x-text="selectedTimeSlots.length +' Hrs'"></td>
+        <tr> 
+          <td>Mobile</td> 
+          <td x-text="guest.mobile"></td> 
+        </tr>
+        <tr> 
+          <td>email</td> 
+          <td x-text="guest.email"></td> 
+        </tr>
+        <tr> 
+          <td>Gender</td> 
+          <td x-text="guest.gender"></td> 
+        </tr>
+        <tr class="highlight-row"> 
+          <th>Tickets</th> 
+          <th>Charges</th> 
+        </tr>
         <template x-for="guestIndex in ticketTypes">
           <tr x-show="guestIndex.count > 0">
             <td x-text="guestIndex.count + ' ' + guestIndex.name"></td>
             <td x-text="guestIndex.total"></td>
           </tr>
         </template>
-        <tr class="highlight-row"> <th>Total Payable</th> <td x-text="'$' +savedGrandTotal "></td> </tr>
+        <tr class="highlight-row"> 
+          <th>Total Payable</th> 
+          <th x-text="'$' +savedGrandTotal "></th> 
+          </tr>
       </table>
     </div>
   </div>
